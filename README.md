@@ -12,7 +12,7 @@ The `getch()` (and `getche()`) functions in `conio.h` are cumbersome and often r
 - Detects individual control keys (Alt, Control, Shift).
 - Stores character and control data separately.
 
-## Usage
+# Usage
 
 The program defines a struct `InputUTF8` as follows:
 
@@ -31,7 +31,7 @@ The most significant bits are toggled for modifier keys: `0x80000000` for <kbd>A
 
 # Example
 
-An example usage of the simplicity of unicode-getch can be seen in the following snippet. You only need to call `unicode_getch()` and store its result into a `InputUTF8` struct.
+An example usage of the simplicity of unicode-getch can be seen in the following snippet. You only need to call `unicode_getch()` and store its result in an `InputUTF8` struct.
 
 ```c
 #include "unicode_getch.h"
@@ -47,16 +47,16 @@ int main()
 }
 ```
 
-# Technical Limitation
+## Technical Limitation
 
 Due to the internal use of UTF-16 by WinAPI, unicode-getch only supports codepoints up to U+FFFF. This means that some characters, like the grinning face emoji (😀), return the replacement character code (0xefbfbd), while others, like the star and crescent emoji (☪), are supported. All Unicode characters with codepoints less than or equal to U+FFFF are supported.
 
 
 
-# Contributing
+## Contributing
 If you want to contribute to unicode-getch, feel free to fork the project and create a [pull request](https://github.com/anic17/unicode-getch/pulls) with the changes you want to do, describing the changes you made.
 
-# Contact
+## Contact
 
 Feel free to contact me on Discord (@anic17) or my server <a href="https://discord.gg/J628dBqQgb">Program Dream</a>.  
 <a href="https://discord.gg/J628dBqQgb"><img src="https://img.shields.io/discord/728958932210679869?style=flat-square&logo=appveyor"></a>
