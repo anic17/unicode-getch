@@ -12,7 +12,7 @@ The `getch()` (and `getche()`) functions in `conio.h` are cumbersome and often r
 - Detects individual control keys (Alt, Control, Shift).
 - Stores character and control data separately.
 
-# Usage
+## Usage
 
 The program defines a struct `InputUTF8` as follows:
 
@@ -28,10 +28,7 @@ typedef struct InputUTF8
 
 The most significant bits are toggled for modifier keys: `0x80000000` for <kbd>Alt</kbd>, `0x40000000` for <kbd>Control</kbd>, and `0x20000000` for <kbd>Shift</kbd>. This allows the program to capture both Unicode characters and control keys simultaneously (e.g., <kbd>Alt + A</kbd>).
 
-
-
-
-# Example
+## Example
 Using the unicode-getch library is straightforward. Simply include the library with `#include "unicode_getch.h"`. Depending on your compiler, you may need to link against `user32` by adding `-luser32` to your compiler options. Below is an example demonstrating how to use unicode-getch. You only need to call `unicode_getch()` and store its result in an `InputUTF8` struct.
 
 ```c
@@ -55,7 +52,8 @@ Due to the internal use of UTF-16 by WinAPI, unicode-getch only supports codepoi
 
 
 ## Contributing
-If you want to contribute to unicode-getch, feel free to fork the project and create a [pull request](https://github.com/anic17/unicode-getch/pulls) with the changes you want to do, describing the changes you made.
+If you want to contribute to unicode-getch, feel free to fork the project and create a [pull request](https://github.com/anic17/unicode-getch/pulls) with the changes you want to do, describing the changes you made. 
+A modified version of this library is used in the rewritten version of [Newtrodit](https://github.com/anic17/Newtrodit/tree/unicode-newtrodit).
 
 ## Contact
 
