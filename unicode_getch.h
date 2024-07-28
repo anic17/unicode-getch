@@ -13,9 +13,13 @@
 
 */
 
+#ifndef _UNICODE_GETCH_H_ANIC17
+#define _UNICODE_GETCH_H_ANIC17
+
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
+
 
 #define ALT_BITMASK 0x80000000
 #define CTRL_BITMASK 0x40000000
@@ -202,3 +206,4 @@ InputUTF8 unicode_getch()
         FlushConsoleInputBuffer(hStdin); // Flush the input buffer so previous keystrokes are ignored
     }
 }
+#endif
