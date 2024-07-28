@@ -29,9 +29,10 @@ typedef struct InputUTF8
 The most significant bits are toggled for modifier keys: `0x80000000` for <kbd>Alt</kbd>, `0x40000000` for <kbd>Control</kbd>, and `0x20000000` for <kbd>Shift</kbd>. This allows the program to capture both Unicode characters and control keys simultaneously (e.g., <kbd>Alt + A</kbd>).
 
 
-# Example
 
-An example usage of the simplicity of unicode-getch can be seen in the following snippet. You only need to call `unicode_getch()` and store its result in an `InputUTF8` struct.
+
+# Example
+Using the unicode-getch library is straightforward. Simply include the library with `#include "unicode_getch.h"`. Depending on your compiler, you may need to link against `user32` by adding `-luser32` to your compiler options. Below is an example demonstrating how to use unicode-getch. You only need to call `unicode_getch()` and store its result in an `InputUTF8` struct.
 
 ```c
 #include "unicode_getch.h"
