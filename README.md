@@ -1,6 +1,6 @@
 # unicode-getch
 
-A better version of `conio.h`'s `getch()` function that includes full support for Unicode and can retrieve more keyboard combinations.
+A better version of `conio.h`'s `getch()` function that includes support for Unicode and can retrieve more keyboard combinations.
 
 ## Why Use unicode-getch?
 
@@ -50,9 +50,7 @@ int main()
 
 ## Technical Limitation
 
-Due to the internal use of UTF-16 by WinAPI, unicode-getch only supports codepoints up to U+FFFF. This means that some characters, like the grinning face emoji (😀), return the replacement character code (0xefbfbd), while others, like the star and crescent emoji (☪), are supported. All Unicode characters with codepoints less than or equal to U+FFFF are supported.
-
-
+Due to the internal use of UTF-16 by WinAPI, unicode-getch only supports codepoints up to U+FFFF. This means that some characters, like the grinning face emoji (😀), return the replacement character code (0xefbfbd), while others, like the star and crescent emoji (☪), are supported. All Unicode characters with codepoints less than or equal to U+FFFF are supported by the WinAPI functions used thus also by unicode-getch.
 
 ## Contributing
 If you want to contribute to unicode-getch, feel free to fork the project and create a [pull request](https://github.com/anic17/unicode-getch/pulls) with the changes you want to do, describing the changes you made. 
