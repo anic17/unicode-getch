@@ -14,7 +14,7 @@ The `getch()` (and `getche()`) functions in `conio.h` are cumbersome and often r
 
 ## Usage
 
-[!NOTE]
+> [!NOTE]
 > This library is Windows-only. Depending on your compiler, you may need to link against `user32` by adding `-luser32` to your compiler options.
 
 The program defines a struct `InputUTF8` as follows:
