@@ -27,7 +27,7 @@ typedef struct InputUTF8
 } InputUTF8;
 ```
 - `utf8char` contains the retrieved Unicode character in UTF-8 Big Endian. For example, the lowercase Greek theta (θ) is represented as `0xceb8` in UTF-8 encoding.
-- `flags` contains information about pressed keys that are non-printable, which the lowest byte is the [WinAPI virtual key code equivalent](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes).
+- `flags` contains information about pressed keys that are non-printable, where the lowest byte is the [WinAPI virtual key code equivalent](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes).
 
 The most significant bits are toggled for modifier keys: `0x80000000` for <kbd>Alt</kbd>, `0x40000000` for <kbd>Control</kbd>, and `0x20000000` for <kbd>Shift</kbd>. This allows the program to capture both Unicode characters and control keys simultaneously (e.g., <kbd>Alt + A</kbd>).
 
@@ -50,10 +50,10 @@ int main()
 
 ## Technical Limitation
 
-Due to the internal use of UTF-16 by WinAPI, unicode-getch only supports codepoints up to U+FFFF. This means that some characters, like the grinning face emoji (😀), return the replacement character code (0xefbfbd), while others, like the star and crescent emoji (☪), are supported. All Unicode characters with codepoints less than or equal to U+FFFF are supported by the WinAPI functions used thus also by unicode-getch.
+Due to the internal use of UTF-16 by WinAPI, unicode-getch only supports codepoints up to U+FFFF. This means that some characters, like the grinning face emoji (😀), return the replacement character code (`0xefbfbd`), while others, like the peace symbol emoji (☮️), are supported. All Unicode characters with codepoints less than or equal to U+FFFF are supported by the WinAPI functions used, thus also by unicode-getch.
 
 ## Contributing
-If you want to contribute to unicode-getch, feel free to fork the project and create a [pull request](https://github.com/anic17/unicode-getch/pulls) with the changes you want to do, describing the changes you made. 
+If you want to contribute to unicode-getch, feel free to fork the project and create a [pull request](https://github.com/anic17/unicode-getch/pulls) with the changes you want to make, describing the changes you made. 
 A modified version of this library is used in the rewritten version of [Newtrodit](https://github.com/anic17/Newtrodit/tree/unicode-newtrodit).
 
 ## Contact
@@ -62,7 +62,7 @@ Feel free to contact me on Discord (@anic17) or my server <a href="https://disco
 <a href="https://discord.gg/J628dBqQgb"><img src="https://img.shields.io/discord/728958932210679869?style=flat-square&logo=appveyor"></a>
 
 
-**Copyright &copy; 2024 anic17 Software**
+**Copyright &copy; 2025 anic17 Software**
 <!-- 
 View counter 
 -->
