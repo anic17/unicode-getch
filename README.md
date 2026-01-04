@@ -62,7 +62,7 @@ Feel free to contact me on Discord (@anic17) or my server <a href="https://disco
 <a href="https://discord.gg/J628dBqQgb"><img src="https://img.shields.io/discord/728958932210679869?style=flat-square&logo=appveyor"></a>
 
 
-**Copyright &copy; 2025 anic17 Software**
+**Copyright &copy; 2026 anic17 Software**
 <!-- 
 View counter 
 -->
